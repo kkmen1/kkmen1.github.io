@@ -97,7 +97,7 @@
 }
 
 .des-content{
-    margin: 0 16px 32px;
+    margin: 0 16px 120px;
     flex: 1;
     min-width: 0;
     text-indent: 2em;
@@ -139,7 +139,7 @@
     }
 
     .about-container{
-        height: 160px;
+        height: 120px;
     }
 
     .half{
