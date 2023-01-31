@@ -1,0 +1,152 @@
+.about-me{
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.about-container{
+    height: 100vh;
+    background: url('/assets/about_bg.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.video-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.video-box{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.video-box video{
+    object-fit: cover;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+    display: flex;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+	z-index: 9;
+}
+
+.main .title{
+    font-size: 62px;
+}
+
+.half{
+    width: 50%;
+}
+
+.sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 16px 32px;
+    position: relative;
+}
+
+.inf{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    background: #ddd;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.avatar img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.name{
+    margin-left: 16px;
+    font-size: 32px;
+}
+
+.des{
+    padding: 32px 16px;
+    /* display: flex;
+    flex-direction: row-reverse; */
+}
+
+.des-content{
+    margin: 0 16px 32px;
+    flex: 1;
+    min-width: 0;
+    text-indent: 2em;
+}
+
+.acc{
+    /* min-width: 220px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.acc-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+.acc-item-name{
+   width: 120px;
+}
+
+.acc-item-icon{
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+.acc-item-icon i{
+    font-size: 22px;
+
+}
+
+@media screen  and (max-width: 960px){
+    .about-me{
+        display: block;
+        height: auto;
+    }
+
+    .about-container{
+        height: 160px;
+    }
+
+    .half{
+        width: 100%;
+    }
+
+    .des{
+        display: block;
+    }
+}
