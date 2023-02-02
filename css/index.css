@@ -13,10 +13,11 @@
 
 .swiper-slide{
     flex: 1;
+    min-height: 0;
 }
 
 .index-container{
-    height: 100vh;
+    height: 100%;
     background: url('/assets/index_bg.jpg') center no-repeat;
     background-size: cover;
     position: relative;
@@ -46,7 +47,7 @@
 }
 
 .main{
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.111);
     position: absolute;
     display: flex;
     top: 0;
@@ -86,10 +87,16 @@
 
 .accounts a{
     color: #fff;
+    transition: all 0.2s;
 }
 
 .accounts a:hover{
-   text-decoration: none;
+    transform: translate(0, -10px);
+    transform: scale(1.2);
+}
+
+.accounts a:hover{
+    text-decoration: none;
 }
 
 .accounts i{
@@ -98,13 +105,14 @@
 }
 
 .sub{
-    height: 100vh;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 16px;
+    background: #fff;
 }
 
 .info .title{
@@ -121,7 +129,7 @@
 }
 
 .icon-DouYin:hover{
-    color: #646464;
+    color: #48f9ff;
 }
 
 .icon-XiaoHongShu:hover{
@@ -147,5 +155,6 @@
 @media screen  and (max-width: 960px){
     .swiper-slide{
         flex: auto;
+        background: #fff;
     }
 }

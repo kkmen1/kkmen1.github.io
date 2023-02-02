@@ -1,11 +1,11 @@
 .categories-blog-page{
 	display: flex;
-	height: 100vh;
+	height: 100%;
     position: relative;
 }
 
 .categories-container{
-    height: 100vh;
+	height: 100%;
     background: url('/assets/categories_bg.jpg') center no-repeat;
     background-size: cover;
 	position: relative;
@@ -78,7 +78,7 @@
 	padding: 44% 8px 0;
 	margin-bottom: 16px;
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .photo-block{
@@ -88,13 +88,30 @@
 	right: 8px;
 	/* width: 100%; */
 	height: 100%;
+    transition: all 0.2s;
+}
+
+.photo-block:hover{
+    transform: translate(0, -10px);
+    transform: scale(1.05);
+    box-shadow: 0 8px 8px 0 #7f7f7f;
 }
 
 .photo-item .title{
-	height: 16px;
+    position: absolute;
+    padding: 0 8px;
+	height: 32px;
+    line-height: 32px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+    z-index: 9;
+    background-image: linear-gradient( 0deg , rgba(0,0,0,0.5), rgba(0,0,0,0));
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
 }
 
 .thumb{

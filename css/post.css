@@ -1,31 +1,80 @@
 .blog-page{
 	display: flex;
-	height: 100vh;
+	height: 100%;
 	position: relative;
+}
+
+.back-nav{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    display: flex;
+    z-index: 99;
+}
+
+.back-nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.back-nav-item:hover{
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.back-nav-item i{
+    font-size: 24px;
+}
+
+.back-nav-name{
+    font-size: 12px;
 }
 
 .main{
     height: 100%;
-    /* background: rgba(0, 0, 0, 0.8); */
+    z-index: 90;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
-	
+	position: absolute;
+    padding: 80px 24px;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .main .photo img{
 	max-width: 100%;
+    max-height: 100%;
+}
+
+.main .photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
 }
 
 .page-container{
-    height: 100vh;
-    /* background: url('/assets/page_bg.jpg') center no-repeat;
-    background-size: cover; */
-	padding: 80px 24px 24px;
+    height: 100%;
 	background: #2e2e2e;
     position: relative;
+}
+
+.page-container .mask{
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .half{
@@ -52,12 +101,15 @@
 @media screen  and (max-width: 960px){
     .blog-page{
         display: block;
-        height: auto;
+        min-height: 100%;
+    }
+
+    .main{
+        padding: 80px 16px;
     }
 
 	.page-container{
-        height: auto;
-		padding: 80px 16px 16px;
+        min-height: 100%;
     }
 
 	.half{
